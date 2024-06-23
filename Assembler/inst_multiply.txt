@@ -1,0 +1,19 @@
+# MULTIPLY
+# Calculate the equation R1 * R0, then store result in R2
+
+        DATA R0 5   # First number
+        DATA R1 11  # Second number
+        DATA R3 0x1 # Bit counter
+        XOR  R2 R2  # Create number 0
+L_STR:  CLF
+        SHR  R0 R0
+        JC   L_MUL  # If last bit is 1, add
+        JMP  L_SHF  # Other wise, continue to shift
+L_MUL:  CLF
+        ADD  R1 R2
+L_SHF:  CLF
+        SHL  R1 R1
+        SHL  R3 R3
+        JC   L_END
+        JMP  L_STR
+L_END:  END
