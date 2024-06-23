@@ -1,8 +1,0 @@
-../src/cpu_pkg.sv
-../src/alu.sv
-../src/alu_wr.sv
-../src/common_reg.sv
-../src/cpu.sv
-../src/cpu_top.sv
-../src/flag.sv
-../src/memory_array.sv
